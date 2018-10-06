@@ -1,0 +1,24 @@
+.header {
+  height: 50px;
+  line-height: 50px;
+  background: orange;
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+  width: 300px;
+}
+
+.delete {
+  float: right;
+}
+
+.add {
+  margin-left: 5px;
+}
+
+.holder {
+  display: inline-block;
+  margin-right: 5px;
+}

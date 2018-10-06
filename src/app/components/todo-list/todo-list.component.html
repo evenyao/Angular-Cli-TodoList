@@ -1,0 +1,28 @@
+<h1 class="header">ToDoList</h1>
+
+<h3 class="holder">请输入事项</h3>
+<input type="text" [(ngModel)]='content' (keyup)="addDataKeybord($event)">
+<button class="add" (click)="addData()">Add</button>
+
+<hr>
+<h2>正在进行</h2>
+<ul>
+  <li *ngFor="let item of list; let i = index"
+      [hidden]="item.status==2">
+    <button (click)="changeStatusDone(i)">ChangeDone</button>
+    {{item.content}}
+    <button (click)="deleteData(i)" class="delete">delete</button>
+  </li>
+</ul>
+
+
+<hr>
+<h2>已经完成</h2>
+<ul>
+  <li *ngFor="let item of list; let i = index"
+      [hidden]="item.status==1">
+    <button (click)="changeStatusDoing(i)">ChangeDoing</button>
+    {{item.content}}
+    <button (click)="deleteData(i)" class="delete">delete</button>
+  </li>
+</ul>
